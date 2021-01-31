@@ -45,6 +45,12 @@ class Joke
     private $value;
 
     /**
+	  * The id that has the joke in the API.
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $chuckNorrisJokesApiId;
+	 
+    /**
      * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="jokes")
      */
     private $categories;
@@ -115,6 +121,18 @@ class Joke
     public function setValue(string $value): self
     {
         $this->value = $value;
+
+        return $this;
+    }
+
+    public function getChuckNorrisJokesApiId(): ?string
+    {
+        return $this->chuckNorrisJokesApiId;
+    }
+
+    public function setChuckNorrisJokesApiId(?string $chuckNorrisJokesApiId): self
+    {
+        $this->chuckNorrisJokesApiId = $chuckNorrisJokesApiId;
 
         return $this;
     }
