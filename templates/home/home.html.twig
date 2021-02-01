@@ -1,7 +1,25 @@
 {% extends "base.html.twig" %}
 
-{% block body %}
-	{% for category in categories %}
-		<p>{{ category.name }}</p>
-	{% endfor %}
+{% block mainbody %}
+	<div class="container">
+		<div class="row">
+			<h1>Chuck Norris Jokes</h1>
+		</div>
+
+		<div class="row">
+			<div id="categories-menu">
+				<ul>
+				{% for category in categories %}
+					<li>
+						{{ category.name | capitalize }}
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+			<div id="jokes-display">
+				<img id="chuck-norris-logo" src="{{ asset('build/images/chuck_norris.png') }}" alt="Chuck Norris image">
+				<p id="joke-text">Click on a category to show a random joke...</p>
+			</div>
+		</div>
+	</div>
 {% endblock %}

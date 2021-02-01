@@ -1,0 +1,30 @@
+/* the ~ allows you to reference things in node_modules */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "./categories-menu.css";
+
+@import "./jokes-display.css";
+
+body
+{
+	font-family: "Roboto";
+}
+
+h1
+{
+	margin: 20px auto;
+}
+
+
+
+#jokes-display
+{
+	float: right;
+	margin: 0 auto;
+}
+
+#chuck-norris-logo
+{
+	width: 30vw;
+	margin-top: 40px;
+}
