@@ -52,7 +52,11 @@ class JokeController extends AbstractController
 
 		$sessionJokes = $this->session->get('jokes', []);
 
-		$sessionJokes[] = $jokeText;
+		// Avoid repeating the joke in the array 
+		if( !(in_array($jokeText, $sessionJokes, true)) )
+		{
+			$sessionJokes[] = $jokeText;
+		}
 
 		$this->session->set('jokes', $sessionJokes);
 
