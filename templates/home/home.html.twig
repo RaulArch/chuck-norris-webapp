@@ -7,24 +7,59 @@
 		</div>
 
 		<div class="row">
-			<div id="categories-menu">
-				<ul>
-				{% for category in categories %}
-					<li value="{{ category.name }}">
-						{{ category.name | capitalize }}
-					</li>
-				{% endfor %}
-				</ul>
+
+			<div class="col-12 col-sm-3 col-md-2">
+				<div id="categories-menu">
+					<ul>
+						{% for category in categories %}
+							<li value="{{ category.name }}">
+								{{ category.name | capitalize }}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
 			</div>
-			<div id="jokes-display">
-				<img id="chuck-norris-logo" src="{{ asset('build/images/chuck_norris.png') }}" alt="Chuck Norris image">
-				<p id="joke-text">Click on a category to show a random joke...</p>
+
+			<div class="col-12 col-sm-9 col-md-10">
+				<div id="jokes-display">
+
+					<div class="row">
+						<div class="col-12">
+							<img id="chuck-norris-logo" class="img-fluid" src="{{ asset('build/images/chuck_norris.png') }}"
+								alt="Chuck Norris image">
+						</div>
+						<div class="col-12">
+							<p id="joke-text">Click on a category to show a random joke...</p>
+						</div>
+					</div>
+
+					<div id="session-jokes-buttons" class="row">
+						<div class="col-12 col-sm-6 text-center">
+							<button id="show-session-jokes" class="btn btn-dark">Show session jokes</button>
+						</div>
+					
+						<div class="col-12 col-sm-6 text-center">
+							<button id="delete-session-jokes" class="btn btn-dark">Delete session jokes</button>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-12">
+							<div id="jokes-list">
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
+
 		</div>
+
 	</div>
 {% endblock %}
 
 {% block javascripts %}
 	{{ parent() }}
 	{{ encore_entry_script_tags('get_random_joke') }}
+	{{ encore_entry_script_tags('session_jokes') }}
 {% endblock %}

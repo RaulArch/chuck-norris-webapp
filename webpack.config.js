@@ -35,6 +35,7 @@ Encore
      */
     .addEntry('app', './assets/js/app.js')
 	 .addEntry('get_random_joke', './assets/js/get_random_joke.js')
+	 .addEntry('session_jokes', './assets/js/session_jokes.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

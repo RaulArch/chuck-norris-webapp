@@ -1,12 +1,20 @@
+#jokes-display
+{
+	margin: 0 auto;
+}
+
 #chuck-norris-logo
 {
-	display:block;
+	display: block;
    margin: 0 auto;
+	width: 50%;
+	height: auto;
+	margin-top: 40px;
 }
 
 #joke-text
 {
-	width: 40vw;
+	width: 80%;
 	margin: 40px auto 0px;
 	padding: 4px 10px;
 	border: 2px solid #2c2c2c;
@@ -14,4 +22,19 @@
 	color: #4c4c4c;
 	opacity: 1.0;
 	transition: opacity 0.4s;
+}
+
+#session-jokes-buttons
+{
+	margin-top: 40px;
+}
+
+#jokes-list
+{
+	width: 80%;
+	height: 200px;
+	margin: 40px auto;
+	padding: 4px 10px;
+	overflow-y: auto;
+	visibility: hidden;
 }
