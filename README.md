@@ -19,4 +19,4 @@ You can choose a category and get a random joke belonging to that category. Also
 
 6. Open your favourite browser and go to (http://localhost:8000/).
 
-![Chuck Norris Jokes Web app.](https://github.com/RaulArch/chuk-norris-webapp/blob/main/webapp.jpg?raw=true)
+![Chuck Norris Jokes Web app.](https://github.com/RaulArch/chuk-norris-webapp/blob/main/webapp.png?raw=true)
