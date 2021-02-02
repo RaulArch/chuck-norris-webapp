@@ -15,8 +15,10 @@ You can choose a category and get a random joke belonging to that category. Also
 
 4. Run `composer install` and `npm install` to install all dependences.
 
-5. Run `symfony server:start` to initiate Symfony local web server.
+5. Run `npm run dev` to build the assets.
 
-6. Open your favourite browser and go to (http://localhost:8000/).
+6. Run `symfony server:start` to initiate Symfony local web server.
+
+7. Open your favourite browser and go to (http://localhost:8000/).
 
 ![Chuck Norris Jokes Web app.](https://github.com/RaulArch/chuk-norris-webapp/blob/main/webapp.png?raw=true)
